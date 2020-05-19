@@ -6,7 +6,10 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
-$(document).on("keypress tap click", function () {
+
+
+
+$(document).on("keypress tap", function () {
     if (!started) {
         $("#level-title").text("Level " + level);
         nextSequence();
@@ -25,6 +28,12 @@ $(".btn").click(function () {
 
     checkAnswer(userClickedPattern.length - 1);
 });
+
+$("#orange").click(function () {
+    startOver();
+
+});
+
 
 function checkAnswer(currentLevel) {
 
@@ -73,7 +82,9 @@ function playSound(name) {
 }
 
 function startOver() {
+    $("#level-title").fadeIn(50).fadeOut(50).fadeIn(50);
     level = 0;
     gamePattern = [];
     started = false;
+    $("#level-title").text("Press A Key or Tap to Start");
 }
