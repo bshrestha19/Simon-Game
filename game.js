@@ -32,7 +32,7 @@ function checkAnswer(currentLevel) {
         if (userClickedPattern.length === gamePattern.length) {
             setTimeout(function () {
                 nextSequence();
-            }, 1000);
+            }, 700);
         }
     } else {
         playSound("wrong");
@@ -56,7 +56,7 @@ function nextSequence() {
     var randomChosenColour = buttonColours[randomNumber];
     gamePattern.push(randomChosenColour);
 
-    $("#" + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
+    $("#" + randomChosenColour).fadeIn(50).fadeOut(50).fadeIn(50);
     playSound(randomChosenColour);
 }
 
