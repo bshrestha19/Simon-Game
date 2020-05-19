@@ -15,9 +15,6 @@ $(document).on("keypress tap click", function () {
 });
 
 
-
-
-
 $(".btn").click(function () {
 
     var userChosenColour = $(this).attr("id");
@@ -67,7 +64,7 @@ function animatePress(currentColor) {
     $("#" + currentColor).addClass("pressed");
     setTimeout(function () {
         $("#" + currentColor).removeClass("pressed");
-    }, 100);
+    }, 50);
 }
 
 function playSound(name) {
