@@ -9,7 +9,7 @@ var level = 0;
 
 
 
-$(document).on("keypress tap", function () {
+$(document).on("keypress touchend", function () {
     if (!started) {
         $("#level-title").text("Level " + level);
         nextSequence();
